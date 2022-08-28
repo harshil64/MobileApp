@@ -1,0 +1,29 @@
+<div class="mobile-detail-content">
+    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item" *ngFor="let item of imagedata; let i=index" [ngClass]="item.isActive ? 'active': ''">
+            <img class="mobile-detail-img" src="{{item.url}}" alt="First slide">
+          </div>
+        </div>
+        <a class="carousel-control-prev" (click)="sliderClick(true)" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        </a>
+        <a class="carousel-control-next" (click)="sliderClick(false)" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        </a>
+      </div>
+
+    <div class="container">
+    <div class="mobiledetail-price">Price: {{mobileDetails.price | currency}}</div>
+    <div class="mobiledetail-rating">Rating: {{mobileDetails.rating}}</div>
+    </div>
+    <div class="container">
+    <div class="mobile-details">
+        <span class="mobile-name">{{mobileDetails.name}}</span>
+        <span class="mobile-brand">{{mobileDetails.brand}}</span>
+    </div>
+    <div>
+        <p class="mobile-detail-description">{{mobileDetails.description}}</p>
+    </div>
+</div>
+</div>

@@ -1,0 +1,13 @@
+<mat-toolbar color="primary">
+    <mat-icon *ngIf="showBackButton" class="back-arrow" routerLink="/">arrow_circle_left</mat-icon>
+    <div><a routerLink="/">Mobile Phone</a></div>
+    <div *ngIf="!showBackButton" class="sort-icon" (click)="openSortingDialog()"><mat-icon>sort</mat-icon></div>
+</mat-toolbar>
+
+<ng-template #dialogRef let-mydata>
+    <mat-radio-group class="sort-radio-btn-group" aria-label="Select an option" [(ngModel)]="selectedSortOptions">
+        <mat-radio-button class="radio-button" *ngFor="let data of sortingOptions" 
+        [value]="data.value" (change)="radioChange($event)">{{data.label}}
+        </mat-radio-button>
+    </mat-radio-group>
+</ng-template>

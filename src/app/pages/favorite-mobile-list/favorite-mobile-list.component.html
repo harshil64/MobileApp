@@ -1,0 +1,15 @@
+<div class="mobile-content">
+    <div class="row mobile-list-row" *ngFor="let mobile of favoriteMobilePhones">
+        <div class="col-4 div-mobile-image">
+            <img class="mobile-image" src="{{mobile.thumbImageURL}}" alt="Mobile Phone Image">
+        </div>
+        <div class="col-7">
+            <p class="mobile-name">{{mobile.name}}</p>
+            <p class="mobile-fav-price">Price: {{mobile.price | currency}}</p>
+            <div class="mobile-info">
+                <span>Rating: {{mobile.rating}}</span>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="no-favorite-mobiles" *ngIf="favoriteMobilePhones?.length == 0"><p>Please click on heart icon on mobile list to add as your favorite</p></div>

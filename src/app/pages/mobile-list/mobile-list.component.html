@@ -1,0 +1,23 @@
+<div class="mobile-content">
+    <div class="row mobile-list-row" *ngFor="let mobile of mobilePhones">
+        <div class="col-4 div-mobile-image">
+            <img (click)="navigateToMobileDetail(mobile.id)" class="mobile-image" src="{{mobile.thumbImageURL}}" alt="Mobile Phone Image">
+        </div>
+        <div class="col-7">
+            <p class="mobile-name" (click)="navigateToMobileDetail(mobile.id)">{{mobile.name}}</p>
+            <p class="mobile-description" (click)="navigateToMobileDetail(mobile.id)">{{mobile.description}}</p>
+            <div class="mobile-info">
+                <span>Price: {{mobile.price | currency}}</span>
+                <span>Rating: {{mobile.rating}}</span>
+            </div>
+        </div>
+        <div class="col-1 heart-div">
+            <img *ngIf="mobile.isFavorite else showHeart" src="../../../assets/images/filled_heart.png" 
+            alt="Heart Image"
+            (click)="addMobileToFavorite(mobile)">
+            <ng-template #showHeart>
+                <img src="../../../assets/images/heart.png" alt="Heart Image" (click)="addMobileToFavorite(mobile)">
+            </ng-template>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,25 @@
+a {
+    text-decoration: none;
+    color: white;
+}
+
+a:hover,
+a:active {
+    color: white;
+}
+.sort-icon{
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+}
+.back-arrow{
+    width: 50px;
+}
+.sort-radio-btn-group{
+    display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.radio-button {
+    margin: 5px;
+}

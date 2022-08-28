@@ -1,0 +1,37 @@
+
+.mobile-name{
+    font-weight: 700;
+    font-size: 18px;
+    margin-right: 10px;
+}
+.mobile-details{
+    margin: 20px 0px;
+}
+.mobile-detail-description , .mobile-brand{
+    font-weight: 600;
+    opacity: 0.5;
+    color: #000000;
+    font-style: normal;
+}
+.mobile-detail-content{
+    position: relative;
+}
+.mobiledetail-price {
+    position: absolute;
+    right: 20px;
+    font-weight: 600;
+}
+.mobiledetail-rating {
+    font-weight: 500;
+}
+.carousel-control-prev-icon, .carousel-control-next-icon{
+    background-color: #3f51b5;
+}
+.mobile-detail-img{
+    max-height: 300px;
+    max-width: 150px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    height: 250px;
+}
